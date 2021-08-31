@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高校丘比特</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container" style="height: 32%;background-color: #008Eb7">
+    <div class="ui white mini button" style="float: right;margin-top: 50px;margin-right: 10%">
+        <a href="login_reg.html" style="color: black">登录</a>
+    </div>
+    <p id="title" class="title">高校丘比特平台V1.0发布</p>
+    <p class="tail">交朋友！处对象！唠嗑！学习！拿到微信，想怎么聊就怎么聊，想怎么处就怎么处！</p>
+</div>
+<div>
+    <p style="color: coral;font-size: 38px;text-align: center;margin-bottom: 0px">本站功能</p>
+    <p style="font-size: 17px;text-align: center">这里满足您交友需求的一切</p>
+    <div class="ui three column grid" id="three-function-icon" style="margin-top: 40px">
+        <div class="column">
+            <a href="wechat_manage.html" target="_blank" style="padding-left: 37px">
+                <i class="ui wechat icon massive" style="color: #04BE02"></i>
+                <div class="icon-name" style="text-align: center">我的微信管理</div>
+            </a>
+            <div style="margin-top: 20px;text-align: center">
+                <p class="description">查看、修改已投放的微信和已获取的微信</p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="#" style="padding-left: 37px" onclick="savaFun()">
+                <i class="paper plane icon massive red" style="padding-left: 20px"></i>
+                <div class="icon-name" style="text-align: center">投放微信</div>
+            </a>
+            <div style="margin-top: 20px;text-align: center">
+                <p class="description">使用此功能您可将自己或朋友的微信投放到本站台，以便他人可以获取到此微信</p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="#" style="padding-left: 37px">
+                <i class="american sign language interpreting icon massive teal"></i>
+                <div class="icon-name" style="text-align: center">我要交朋友</div>
+            </a>
+            <div style="margin-top: 20px;text-align: center">
+                <p class="description">该功能可使您随机获取一个已投放到本站的微信号，您可指定性别和学校</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--存放微信模态框-->
+<div class="ui modal ">
+    <i class="close icon"></i>
+    <div class="header">
+        投放微信
+    </div>
+    <div class="ui container" style="align-content: center">
+        <form action="" class="ui form">
+            <div class="inline field">
+                <label>微信号</label>
+                <input type="text" name="wechat"/>
+            </div>
+            <div class="inline field">
+                <label>性别</label>
+                <input type="text" name="sex"/>
+            </div>
+            <div class="inline field">
+                <label>学校</label>
+                <input type="text" name="school"/>
+            </div>
+            <div class="inline field">
+                <label>年级</label>
+                <input type="text" name="grade"/>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            不可以
+        </div>
+        <div class="ui positive right labeled icon button">
+            是的，那是我
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    function savaFun(){
+        $(".ui.modal")
+            .modal("show")
+            .modal('setting','closable',false)
+    }
+</script>
+</body>
+</html>
